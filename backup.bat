@@ -7,8 +7,9 @@ set exitcode=%errorlevel%
 
 if %errorlevel% equ 1 (
     ECHO Backup completed successfully.
+    timeout /t 10
+    exit
 ) else (
     ECHO Backup failed with error code %errorlevel%
+    PAUSE
 )
-timeout /t 10
-exit
